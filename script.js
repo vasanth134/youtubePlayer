@@ -44,8 +44,9 @@ const getChannelIcon = (video_data) => {
 const makeVideoCard = (data) => {
   // Handle both types of data structures: popular videos and search results
   const videoId = data.id.videoId ? data.id.videoId : data.id;
-  
+
   videoCardContainer.innerHTML += `
+  <div class="videoCard">
   <div class="video" onclick="location.href='https://www.youtube.com/watch?v=${videoId}'">
     <img src="${data.snippet.thumbnails.high.url}" class="thumbnail" alt="">
     <div class="content">
@@ -55,6 +56,7 @@ const makeVideoCard = (data) => {
         <p class="channel-name">${data.snippet.channelTitle}</p>
       </div>
     </div>
+  </div>
   </div>
   `;
 };
@@ -69,12 +71,12 @@ const fetchVideos = (query) => {
         key: api_key,
         part: "snippet",
         q: query,
-        maxResults: 20,
+        maxResults: 30,
       })
   )
     .then((res) => res.json())
     .then((data) => {
-      videoCardContainer.innerHTML = ''; // Clear previous results
+      videoCardContainer.innerHTML = ""; // Clear previous results
       data.items.forEach((item) => {
         if (item.id.kind === "youtube#video") {
           getChannelIcon(item);

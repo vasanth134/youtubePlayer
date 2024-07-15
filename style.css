@@ -1,0 +1,35 @@
+*{
+    margin: 0%;
+    padding: 0%;
+}
+
+body{
+    background-color: #1D1F28;
+    color: aliceblue;
+}
+.videoCard{
+    display: grid;
+    grid-template-columns: repeat(5,minmax(350px,1fr));
+    grid-template-rows: auto;
+    gap: 40px;
+}
+    .video{
+        position: relative;
+        height: 300px;
+        width: auto;
+        /* display: flex; */
+        /* flex-direction: column; */
+
+        /* width: 300px; */
+    }
+.thumbnail{
+    height: 200px;
+    width: 100%;
+    
+    
+    /* width: 100%; */
+}
+.channel-icon{
+    height: 40px;
+    width: 40px;
+}
