@@ -71,7 +71,7 @@ const fetchVideos = (query) => {
         key: api_key,
         part: "snippet",
         q: query,
-        maxResults: 30,
+        maxResults: 50,
       })
   )
     .then((res) => res.json())

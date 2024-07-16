@@ -1,35 +1,102 @@
-*{
-    margin: 0%;
-    padding: 0%;
+* {
+  margin: 0%;
+  padding: 0%;
 }
 
-body{
-    background-color: #1D1F28;
-    color: aliceblue;
+body {
+  background-color: #1d1f28;
+  color: aliceblue;
+  font-family: sans-serif;
+  display: inline;
+  scroll-behavior: smooth;
 }
-.videoCard{
-    display: grid;
-    grid-template-columns: repeat(5,minmax(350px,1fr));
-    grid-template-rows: auto;
-    gap: 40px;
+/* scroll bar  */
+::-webkit-scrollbar {
+  width: 4px;
+  background-color: transparent;
 }
-    .video{
-        position: relative;
-        height: 300px;
-        width: auto;
-        /* display: flex; */
-        /* flex-direction: column; */
+::-webkit-scrollbar-thumb {
+  background-color: #ffff;
+  border-radius: 100px;
+}
+/* search bar */
+.search-bar {
+  position: sticky;
+  top: 0%;
+  height: 100px;
+  width: 100%;
+  background-color: #1d1f28;
+  z-index: 3;
+}
+h1 {
+    width: 0;
+  position: sticky;
+  top: 0%;
+  padding: 1%;
+  z-index: 4;
+}
+.searchInput {
+  position: relative;
+  height: 40px;
+  width: 30%;
+  top: 10px;
+  left: 35%;
+  padding-left: 40px;
+  color: aliceblue;
+  font-size: 16px;
+  background-color: transparent;
+  border: solid wheat 2px;
+  border-radius: 100px 0px 0px 100px;
+  
+}
+.searchSubmitButton{
+    position: relative;
+    height: 42px;
+    width: 3%;
+    top: 24px;
+    left: 31.7%;
+}
+/* video outer card */
+.videoCard {
+  /* position: relative; */
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  text-wrap: nowrap;
+  gap: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+/* video inner card  */
+.video {
+  /* position: relative; */
+  height: 300px;
+  width: 300px;
+  /* display: flex; */
+  /* flex-direction: column; */
+  /* width: 300px; */
+}
 
-        /* width: 300px; */
-    }
-.thumbnail{
-    height: 200px;
-    width: 100%;
-    
-    
-    /* width: 100%; */
+/* video image  */
+.thumbnail {
+  height: 200px;
+  width: 100%;
+  border-radius: 5%;
+  /* width: 100%; */
 }
-.channel-icon{
-    height: 40px;
-    width: 40px;
+
+/* channel icon image  */
+.channel-icon {
+  height: 20px;
+  width: 20px;
+  border-radius: 25%;
+}
+.title {
+  font-size: 18px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.channel-name {
+  font-size: 15px;
+  opacity: 50%;
+  font-family: serif;
 }
