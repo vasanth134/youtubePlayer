@@ -79,6 +79,7 @@ h1 {
 .video {
   height: 300px;
   width: 300px;
+  cursor:pointer;
 }
 
 /* video image  */
