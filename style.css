@@ -84,9 +84,10 @@ h1 {
 
 /* video image  */
 .thumbnail {
-  height: 200px;
+  height: 170px;
   width: 100%;
   border-radius: 5%;
+  object-fit:cover;
 }
 
 /* channel icon image  */
