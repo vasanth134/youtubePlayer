@@ -40,7 +40,7 @@ const getChannelIcon = (video_data) => {
       makeVideoCard(video_data);
     });
 };
-
+//  create a card to video 
 const makeVideoCard = (data) => {
   // Handle both types of data structures: popular videos and search results
   const videoId = data.id.videoId ? data.id.videoId : data.id;
@@ -60,10 +60,10 @@ const makeVideoCard = (data) => {
   </div>
   `;
 };
-
+// input button
 const searchInput = document.querySelector(".searchInput");
 const searchBtn = document.querySelector(".searchSubmitButton");
-
+// search video result
 const fetchVideos = (query) => {
   fetch(
     search_http +
@@ -85,9 +85,14 @@ const fetchVideos = (query) => {
     })
     .catch((err) => console.log(err));
 };
-
+// search
 searchBtn.addEventListener("click", () => {
   if (searchInput.value.length) {
+    fetchVideos(searchInput.value);
+  }
+});
+searchInput.addEventListener("keyup", (e) => {
+  if (e.keyCode === 13) {
     fetchVideos(searchInput.value);
   }
 });
