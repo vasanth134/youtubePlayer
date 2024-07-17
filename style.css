@@ -180,9 +180,10 @@ h1 {
   padding-left: 20px;
 }
 .searchSubmitButton{
-  background-color: #1d1f28;
+  background-color: transparent;
   width: 40px;
   position: relative;
   left: 54px;
+
 }
 }
