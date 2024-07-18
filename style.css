@@ -39,7 +39,7 @@ body {
   position: relative;
   top: 63px;
   color: cornsilk;
-  filter: drop-shadow(5px 5px 5px #fff);
+  filter: drop-shadow(2px 2px 2px #fff);
 }
 .logo-image {
   height: fit-content;
