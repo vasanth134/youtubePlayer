@@ -1,6 +1,6 @@
 const videoCardContainer = document.querySelector(".videoCard");
 
-let api_key = "AIzaSyA2Moo3_Vc2pxtmPmkd3bCsXr895EDiUqg"; //AIzaSyAchR6Bv7zMdJjT3ayisyW4nrWFBhSNiAA
+let api_key = "AIzaSyAchR6Bv7zMdJjT3ayisyW4nrWFBhSNiAA"; //,AIzaSyA2Moo3_Vc2pxtmPmkd3bCsXr895EDiUqg
 let video_http = "https://www.googleapis.com/youtube/v3/videos?";
 let channel_http = "https://www.googleapis.com/youtube/v3/channels?";
 let search_http = "https://www.googleapis.com/youtube/v3/search?";

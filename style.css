@@ -174,7 +174,14 @@ h1 {
     right: 40%;
     top: 0%;
   }
-
+  .search-bar {
+    position: sticky;
+    top: 0%;
+    height: 100px;
+    width: 100%;
+    background-color: transparent;
+    z-index: 3;
+  }
 .searchInput{
   width: 120px;
   position: relative;
